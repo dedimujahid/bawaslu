@@ -22,6 +22,11 @@
 	<h6>Tahapan yang diawasi</h6>
 	<table class='table table-bordered' action="{{URL::to('/cetak_pdf/'.$record->id_customer)}}">
 		<tbody>
+		<tr>
+			<th>Tahapan yang diawasi : </th>
+			<td>{{$record->tahapan}}</td>
+			</tr>
+
 			<tr>
 			<th>Nama Pelaksana Tugas : </th>
 			<td>{{$record->nama}}</td>
@@ -39,25 +44,31 @@
 			<th>Nomor Surat Perintah : </th>
 			<td>{{$record->nomor_surat_perintah}}</td>
 			</tr>
+
 			<tr>
-			<th>Bentuk : </th>
+			<th>II. Kegiatan Pengawasan : </th>
+			<td>{{$record->uraian_singkat}}</td>
+			</tr>
+
+			<tr>
+			<th>a. Bentuk : </th>
 			<td>{{$record->bentuk1}}</td>
 			</tr>
 			<tr>
-			<th>Tujuan : </th>
+			<th>b. Tujuan : </th>
 			<td>{{$record->tujuan1}}</td>
 			</tr>
 			<tr>
-			<th>Sasaran : </th>
+			<th>c. Sasaran : </th>
 			<td>{{$record->sasaran1}}</td>
 			</tr>
 			<tr>
-			<th>Waktu dan Tempat : </th>
+			<th>d. Waktu dan Tempat : </th>
 			<td>{{$record->waktudantempat1}}</td>
 			</tr>
 			
 			<tr>
-			<th>Uraian Singkat : </th>
+			<th>III. Uraian Singkat Hasil Pengawasan : </th>
 			<td>{{$record->uraian_singkat}}</td>
 			</tr>
 			<tr>
