@@ -10,10 +10,10 @@
 
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">User Bawaslu</h3>
+                  <h3 class="card-title">Daftar Laporan</h3>
                 </div>
                 <div class="card-header col-lg-3 col-6">
-                    <a href="{{ route('formu') }}"><button type="button" class="btn btn-block btn-secondary" >Tambah User</button></a>
+                    <a href="{{ route('forma') }}"><button type="button" class="btn btn-block btn-secondary" >Tambahkan</button></a>
 
                 </div>
                 <!-- /.card-header -->
@@ -21,33 +21,21 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Nama Pengawas</th>
-                      <th>Email</th>
+                      <th>Nama Pengawas</th>
+                      <th>Wilayah</th>
+                      <th>Jabatan</th>
                       <th>Role</th>
                       <th>Edit</th>
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach ($all as $key=>$row)
                     <tr>
-                      <td>{{ $key+1 }}</td>
-                      <td>{{ $row->name }}</td>
-                      <td>{{$row->email}}</td>
-                      <td>{{ $row->role }}</td>
-                      <td>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default">
-                            <a href="{{ URL::to('/edituser/'.$row->id) }}">Edit</a></button>
-                            <button type="button" class="btn btn-default">
-                            <a href="{{ URL::to('/deleteuser/'.$row->id) }}" id="delete">  Hapus</button>
-                            <button type="button" class="btn btn-default">
-                            <a href="{{ URL::to('/printpdf/'.$row->id) }}" id="printpdf">Print Data User</button>
-
-                        </div>
-                      </td>
+                      <td>Other browsers</td>
+                      <td>All others</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>U</td>
                     </tr>
-                    @endforeach
                     </tbody>
                   </table>
                 </div>
@@ -64,7 +52,7 @@
     <!-- /.content -->
 </div>
 @stop
-@section('js')
+<!-- @section('js')
     <script>
         $(function () {
             $('#example').DataTable({
@@ -79,4 +67,4 @@
             });
         });
     </script>
-@stop
+@stop -->

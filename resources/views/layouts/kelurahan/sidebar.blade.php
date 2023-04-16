@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="{{ asset('backend/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -34,54 +34,85 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Layanan
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item"> <!-- INI ADALAH MENU 1-->
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>User Pengguna Aktif</p>
-                </a>
-              </li>
+
+        <li class="nav-item menu-open">
+            <ul class="nav nav-treeview nav-item">
+                <li class="nav-item"><!-- INI ADALAH MENU 3-->
+                    <a href="{{ route('home') }}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Dashboard</p>
+                    </a>
+                  </li>
               <li class="nav-item"><!-- INI ADALAH MENU 2-->
-                <a href="./index2.html" class="nav-link">
+                <a href="{{ route('datatabel') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Laporan FORM A</p>
                 </a>
               </li>
-              <li class="nav-item"><!-- INI ADALAH MENU 3-->
-                <a href="./index3.html" class="nav-link">
+
+
+            </ul>
+        </li>
+
+
+          {{-- <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-circle"></i>
+              <p>
+                KECAMATAN A
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>List Laporan</p>
+                  <p>
+                    KELURAHAN A
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    KELURAHAN A
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-header">WILAYAH</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-circle"></i>
               <p>
-                DESA A
+                KECAMATAN A
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-circle"></i>
-              <p>
-                DESA B
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-          </li>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    KELURAHAN A
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    KELURAHAN A
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </li> --}}
           <li class="nav-item">
             <a class="dropdown-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();
@@ -94,7 +125,6 @@
          </form>
           </li>
         </ul>
-
       </nav>
       <!-- /.sidebar-menu -->
     </div>
